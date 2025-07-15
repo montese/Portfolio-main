@@ -7,46 +7,57 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <nav class="main-nav">
-      <div class="nav-logo">Montese Hall</div>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="index.html#resume">Resume</a></li>
-        <li class="dropdown">
-          <a href="index.html#projects" class="dropdown-toggle">Projects</a>
-          <ul class="dropdown-menu">
-            <li><a href="semesterly.html">Semester.ly Mobile App</a></li>
-            <li><a href="#">Digital Wallet</a></li>
-            <li><a href="#">Meta Ads Manager</a></li>
-            <li><a href="#">Interactive Ad Feature Mock Pitch Deck</a></li>
-          </ul>
-        </li>
-      </ul>
-      <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect class="line top" x="2" y="6" width="24" height="3" rx="1.5" />
-          <rect class="line middle" x="2" y="15" width="24" height="3" rx="1.5" />
-          <rect class="line bottom" x="2" y="24" width="8" height="3" rx="1.5" />
-        </svg>
-      </button>
-    </nav>
-    <div id="mobile-menu" class="mobile-menu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#resume">Resume</a></li>
-        <li class="mobile-dropdown">
-          <button class="mobile-dropdown-toggle" aria-expanded="false">Projects</button>
-          <ul class="mobile-dropdown-menu">
-            <li><a href="semesterly.html">Semester.ly Mobile App</a></li>
-            <li><a href="#">Digital Wallet</a></li>
-            <li><a href="#">Meta Ads Manager</a></li>
-            <li><a href="#">Interactive Ad Feature Mock Pitch Deck</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </header>
+  <div id="header-include"></div>
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('header-include').innerHTML = html;
+        if (window.initHeaderNav) window.initHeaderNav();
+      });
+    function initHeaderNav() {
+      // Header shadow on scroll
+      window.addEventListener('scroll', function() {
+        const header = document.querySelector('.site-header');
+        if (window.scrollY > 0) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+      // Hamburger menu toggle
+      const hamburger = document.querySelector('.hamburger');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', function() {
+          const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+          hamburger.setAttribute('aria-expanded', !expanded);
+          hamburger.classList.toggle('open');
+          mobileMenu.classList.toggle('open');
+          document.body.classList.toggle('menu-open');
+        });
+        // Close menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            hamburger.setAttribute('aria-expanded', false);
+            hamburger.classList.remove('open');
+            mobileMenu.classList.remove('open');
+            document.body.classList.remove('menu-open');
+          });
+        });
+        // Nested dropdown toggle
+        const mobileDropdownToggle = document.querySelector('.mobile-dropdown-toggle');
+        const mobileDropdownMenu = document.querySelector('.mobile-dropdown-menu');
+        if (mobileDropdownToggle && mobileDropdownMenu) {
+          mobileDropdownToggle.addEventListener('click', function() {
+            const expanded = mobileDropdownToggle.getAttribute('aria-expanded') === 'true';
+            mobileDropdownToggle.setAttribute('aria-expanded', !expanded);
+            mobileDropdownMenu.classList.toggle('open');
+          });
+        }
+      }
+    }
+  </script>
   <header class="home-hero">
     <div class="hero-left">
       <div class="hero-title-row">
@@ -161,27 +172,5 @@
       <p>Semesterly &copy; 2024 | UX Portfolio by Your Name</p>
     </div>
   </footer>
-  <script>
-    // Header shadow on scroll
-    window.addEventListener('scroll', function() {
-      const header = document.querySelector('.site-header');
-      if (window.scrollY > 0) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
-
-    const hamburger = document.querySelector('.hamburger');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    hamburger.addEventListener('click', function() {
-      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
-      hamburger.setAttribute('aria-expanded', !expanded);
-      hamburger.classList.toggle('open');
-      mobileMenu.classList.toggle('open');
-      document.body.classList.toggle('menu-open');
-    });
-  </script>
 </body>
 </html> 
