@@ -6,7 +6,7 @@
   <title>Montese Hall – UX Designer</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="index">
   <div id="header-include"></div>
   <script>
     fetch('header.html')
@@ -56,6 +56,25 @@
           });
         }
       }
+      // Desktop Projects dropdown toggle
+      const desktopDropdown = document.querySelector('.nav-links .dropdown');
+      const desktopDropdownToggle = desktopDropdown && desktopDropdown.querySelector('.dropdown-toggle');
+      if (desktopDropdown && desktopDropdownToggle) {
+        desktopDropdownToggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          const isOpen = desktopDropdown.classList.contains('open');
+          // Always toggle: if open, close; if closed, open
+          desktopDropdown.classList.toggle('open');
+          desktopDropdownToggle.setAttribute('aria-expanded', !isOpen);
+        });
+        // Close dropdown on outside click
+        document.addEventListener('click', function(e) {
+          if (!desktopDropdown.contains(e.target)) {
+            desktopDropdown.classList.remove('open');
+            desktopDropdownToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
     }
   </script>
   <header class="home-hero">
@@ -92,7 +111,7 @@
       <div class="resume-list">
         <div class="resume-item">
           <div class="resume-company">
-            <a href="#" class="blue-link">Ahold Delhaize USA</a>
+            <a href="#" class="resume-company">Ahold Delhaize USA</a>
             <div class="resume-dates">Jan. 2021 – Present</div>
           </div>
           <div class="resume-role">
