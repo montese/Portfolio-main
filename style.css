@@ -601,7 +601,7 @@ p {
   top: 0;
   left: 0; right: 0;
   width: 100vw;
-  background: #fff;
+  background: var(--bg-warm-white);
   box-shadow: none;
   transform: translateY(-100%);
   transition: transform 0.35s cubic-bezier(.77,0,.18,1), box-shadow 0.2s;
