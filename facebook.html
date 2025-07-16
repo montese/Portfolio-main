@@ -56,6 +56,25 @@
           });
         }
       }
+      // Desktop Projects dropdown toggle
+      const desktopDropdown = document.querySelector('.nav-links .dropdown');
+      const desktopDropdownToggle = desktopDropdown && desktopDropdown.querySelector('.dropdown-toggle');
+      if (desktopDropdown && desktopDropdownToggle) {
+        desktopDropdownToggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          const isOpen = desktopDropdown.classList.contains('open');
+          // Always toggle: if open, close; if closed, open
+          desktopDropdown.classList.toggle('open');
+          desktopDropdownToggle.setAttribute('aria-expanded', !isOpen);
+        });
+        // Close dropdown on outside click
+        document.addEventListener('click', function(e) {
+          if (!desktopDropdown.contains(e.target)) {
+            desktopDropdown.classList.remove('open');
+            desktopDropdownToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
     }
   </script>
   <main>
