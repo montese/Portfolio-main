@@ -1,6 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --color-oxford-blue: #2D3748;
+  --color-slate-gray: #718096;
+  --color-royal-blue: #2563EB;
+  --color-wild-sand: #F5F5F5;
+  --color-mystic: #E2E8F0;
+  --font-raleway: 'Raleway', sans-serif;
+  --font-open-sans: 'Open Sans', sans-serif;
+}
 
 body {
   -webkit-font-smoothing: antialiased;
@@ -15,6 +27,7 @@ body {
   font-size: 56px;
   line-height: 1.1;
   letter-spacing: -0.02em;
+  color: var(--color-oxford-blue);
 
 }
 
@@ -23,6 +36,7 @@ body {
   font-weight: 400;
   font-size: 20px;
   line-height: 1.5;
+  color: var(--color-slate-gray);
 }
 
 .text-heading-2-upper {
@@ -32,6 +46,7 @@ body {
   line-height: 1.05;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  color: var(--color-slate-gray);
 }
 
 .text-heading-3 {
@@ -39,6 +54,7 @@ body {
   font-weight: 700;
   font-size: 28px;
   line-height: 1.6;
+  color: var(--color-oxford-blue);
 }
 
 .text-heading-4 {
@@ -46,6 +62,7 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.6;
+  color: var(--color-oxford-blue);
 }
 
 .text-subheader {
@@ -53,6 +70,7 @@ body {
   font-weight: 600;
   font-size: 15px;
   line-height: 1.6;
+  color: var(--color-slate-gray);
 }
 
 .text-body {
@@ -60,6 +78,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
+  color: var(--color-oxford-blue);
 }
 
 .text-link {
@@ -67,6 +86,7 @@ body {
   font-weight: 600;
   font-size: 15px;
   line-height: 1.6;
+  color: var(--color-royal-blue);
 }
 
 /* Responsive typography */
