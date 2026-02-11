@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@theme {
+  --color-teal: oklch(0.72 0.11 178);
+}
+
 :root {
   --color-oxford-blue: #2D3748;
   --color-slate-gray: #718096;
@@ -18,7 +22,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  text-shadow: rgba(0,0,0,.01) 0 0 1px;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 }
 
 .text-title {
@@ -27,7 +31,6 @@ body {
   font-size: 56px;
   line-height: 1.1;
   letter-spacing: -0.02em;
-  color: var(--color-oxford-blue);
 
 }
 
@@ -36,7 +39,6 @@ body {
   font-weight: 400;
   font-size: 20px;
   line-height: 1.5;
-  color: var(--color-slate-gray);
 }
 
 .text-heading-2-upper {
@@ -46,7 +48,6 @@ body {
   line-height: 1.05;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-slate-gray);
 }
 
 .text-heading-3 {
@@ -54,7 +55,6 @@ body {
   font-weight: 700;
   font-size: 28px;
   line-height: 1.6;
-  color: var(--color-oxford-blue);
 }
 
 .text-heading-4 {
@@ -62,7 +62,6 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.6;
-  color: var(--color-oxford-blue);
 }
 
 .text-subheader {
@@ -70,7 +69,6 @@ body {
   font-weight: 600;
   font-size: 15px;
   line-height: 1.6;
-  color: var(--color-slate-gray);
 }
 
 .text-body {
@@ -78,7 +76,6 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-  color: var(--color-oxford-blue);
 }
 
 .text-link {
@@ -86,7 +83,6 @@ body {
   font-weight: 600;
   font-size: 15px;
   line-height: 1.6;
-  color: var(--color-royal-blue);
 }
 
 /* Responsive typography */

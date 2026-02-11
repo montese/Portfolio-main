@@ -8,8 +8,27 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="style.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'oxford-blue': '#2D3748',
+            'slate-gray': '#718096',
+            'royal-blue': '#2563EB',
+            'wild-sand': '#F5F5F5',
+            'mystic': '#E2E8F0',
+          },
+          fontFamily: {
+            'raleway': ['Raleway', 'sans-serif'],
+            'open-sans': ['Open Sans', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
 </head>
-<body class="antialiased bg-white overflow-x-hidden ">
+<body class="subpixel-antialiased bg-white overflow-x-hidden ">
   
   <!-- Main Container -->
   <main class="w-full pt-16 md:pt-32 flex flex-col items-center">
@@ -24,11 +43,11 @@
         <div class="relative w-full px-0 md:px-1">
           <!-- Monogram SVG -->
           <img src="assets/index/Vector.svg" alt="Graphic Icon SVG" class="absolute -top-4 w-20 h-20 md:w-[107px] md:h-[105px] z-0"/>
-          <h1 class="text-title pl-8 md:pl-12 relative z-10">Montese Hall</h1>
+          <h1 class="text-title text-oxford-blue pl-8 md:pl-12 relative z-10">Montese Hall</h1>
         </div>
         
         <!-- Subtitle -->
-        <p class="text-subtitle max-w-[600px]">
+        <p class="text-subtitle text-slate-gray max-w-[600px]">
           I'm a UX designer focused on making complex systems simple and delightful. Currently designing products that help teams collaborate better.
         </p>
         
@@ -38,7 +57,7 @@
       <section class="w-full px-6 py-12 flex flex-col gap-6 md:gap-12">
         
         <!-- Section Title -->
-        <h2 class="text-heading-2-upper">Work History</h2>
+        <h2 class="text-heading-2-upper text-slate-gray">Work History</h2>
         
         <!-- Work Items Container -->
         <div class="flex flex-col gap-9">
@@ -46,11 +65,11 @@
           <!-- Work Item: 2024 – Present -->
           <article class="flex flex-col md:flex-row gap-1 md:gap-12">
             <div class="flex-shrink-0 w-full md:w-40">
-              <span class="text-subheader">2024 – Present</span>
+              <span class="text-subheader text-slate-gray">2024 – Present</span>
             </div>
             <div class="flex flex-col gap-2 flex-1">
-              <h3 class="text-heading-4">User Experience Design Lead at Ahold Delhaize USA</h3>
-              <div class="text-body space-y-4">
+              <h3 class="text-heading-4 text-oxford-blue">User Experience Design Lead at Ahold Delhaize USA</h3>
+              <div class="text-body text-slate-gray space-y-4">
                 <p>Simplifying Ahold Delhaize USA's shopping experience across mobile and web for an online grocery platform utilized by six leading grocery brands nationwide, aiding in increasing our yearly average order total by 14% across more than 400 million customer transactions this year.</p>
                 <p>Assisted in defining product strategy and currently leading design for a new branded payment platform that aims to increase omnichannel engagement by 10% and lower transaction costs by 24%.</p>
               </div>
@@ -60,11 +79,11 @@
           <!-- Work Item: 2022 – 2024 -->
           <article class="flex flex-col md:flex-row gap-1 md:gap-12">
             <div class="flex-shrink-0 w-full md:w-40">
-              <span class="text-subheader">2022 – 2024</span>
+              <span class="text-subheader text-slate-gray">2022 – 2024</span>
             </div>
             <div class="flex flex-col gap-2 flex-1">
-              <h3 class="text-heading-4">User Experience Designer at Ahold Delhaize USA</h3>
-              <div class="text-body space-y-4">
+              <h3 class="text-heading-4 text-oxford-blue">User Experience Designer at Ahold Delhaize USA</h3>
+              <div class="text-body text-slate-gray space-y-4">
                 <p>Redesigned our user onboarding and account management experiences resulting in a 22% average increase in omnichannel shoppers across our grocery store brands, optimizing customer engagement and retention.</p>
                 <p>Advanced ADUSA's design documentation practices through the creation and maintenance of design artifacts such as service blueprints and detailed customer journey maps.</p>
               </div>
@@ -74,29 +93,29 @@
           <!-- Work Item: 2021 – 2022 -->
           <article class="flex flex-col md:flex-row gap-1 md:gap-12">
             <div class="flex-shrink-0 w-full md:w-40">
-              <span class="text-subheader">2021 – 2022</span>
+              <span class="text-subheader text-slate-gray">2021 – 2022</span>
             </div>
             <div class="flex flex-col gap-2 flex-1">
-              <h3 class="text-heading-4">Freelance Product Design Consultant</h3>
-              <p class="text-body">Worked with small development teams to realize the potential of their product ideas into fully functional and marketable digital experiences.</p>
+              <h3 class="text-heading-4 text-oxford-blue">Freelance Product Design Consultant</h3>
+              <p class="text-body text-slate-gray">Worked with small development teams to realize the potential of their product ideas into fully functional and marketable digital experiences.</p>
             </div>
           </article>
           
           <!-- Work Item: 2019 -->
           <article class="flex flex-col md:flex-row gap-1 md:gap-12">
             <div class="flex-shrink-0 w-full md:w-40">
-              <span class="text-subheader">2019</span>
+              <span class="text-subheader text-slate-gray">2019</span>
             </div>
             <div class="flex flex-col gap-2 flex-1">
-              <h3 class="text-heading-4">Product Design Intern at Meta</h3>
-              <p class="text-body">Designed sketches, wireframes and functional prototypes for the Meta Ads Manager Targeting application used by 7 million advertisers and impacting all of Meta's 2 billion users worldwide.</p>
+              <h3 class="text-heading-4 text-oxford-blue">Product Design Intern at Meta</h3>
+              <p class="text-body text-slate-gray">Designed sketches, wireframes and functional prototypes for the Meta Ads Manager Targeting application used by 7 million advertisers and impacting all of Meta's 2 billion users worldwide.</p>
             </div>
           </article>
           
         </div>
         
         <!-- Resume Link -->
-        <a href="#" class="inline-flex items-center gap-2 text-link hover:opacity-80 transition-opacity">
+        <a href="#" class="inline-flex items-center gap-2 text-link text-royal-blue hover:opacity-80 transition-opacity">
           <span>Open full resume</span>
           <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 6L6 1M6 1H1M6 1V6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -109,21 +128,21 @@
       <section class="w-full px-6 py-12 flex flex-col gap-6 md:gap-12">
         
         <!-- Section Title -->
-        <h2 class="text-heading-2-upper">Selected Projects</h2>
+        <h2 class="text-heading-2-upper text-slate-gray">Selected Projects</h2>
         
         <!-- Projects Container -->
         <div class="flex flex-col gap-16">
           
           <!-- Project Card: Course Planning App (Semester.ly) -->
-          <a href="/semesterly.html" class="project-card flex flex-col justify-center lg:flex-row lg:gap-12 pl-0 lg:pl-6 rounded-lg overflow-hidden no-underline">
+          <a href="semesterly.html" class="project-card flex flex-col justify-center lg:flex-row lg:gap-12 pl-0 lg:pl-6 rounded-lg overflow-hidden no-underline">
             <!-- Content -->
             <div class="project-content flex justify-center flex-col gap-4 flex-1 order-2 lg:order-1 p-4 lg:p-0">
               <div class="flex flex-col">
-                <h3 class="text-heading-3">Course Planning App</h3>
-                <span class="text-subheader">Semester.ly</span>
+                <h3 class="text-heading-3 text-oxford-blue">Course Planning App</h3>
+                <span class="text-subheader text-oxford-blue">Semester.ly</span>
               </div>
-              <p class="text-body">A robust mobile application that let's Johns Hopkins students to plan their next semester on the go.</p>
-              <span class="inline-flex items-center gap-1 text-link hover:opacity-80 transition-opacity">
+              <p class="text-body text-oxford-blue">A robust mobile application that let's Johns Hopkins students to plan their next semester on the go.</p>
+              <span class="inline-flex items-center gap-1 text-link text-royal-blue hover:opacity-80 transition-opacity">
                 <span>View case study</span>
                 <svg width="15" height="24" viewBox="0 0 15 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5.5 8L10.5 12L5.5 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -133,21 +152,21 @@
             <!-- Image Background -->
             <div class="flex-1 order-1 lg:order-2 bg-wild-sand rounded-lg min-h-[280px] md:min-h-[337px] flex items-center justify-center overflow-hidden">
               <div class="w-full h-full bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
-                <span class="text-sm">Project Image</span>
+                <span class="text-slate-gray text-sm">Project Image</span>
               </div>
             </div>
           </a>
 
           <!-- Project Card: Course Planning App (Semester.ly) -->
-          <a href="/semesterly.html" class="project-card flex flex-col justify-center lg:flex-row lg:gap-12 pl-0 lg:pl-6 rounded-lg overflow-hidden no-underline">
+          <a href="semesterly.html" class="project-card flex flex-col justify-center lg:flex-row lg:gap-12 pl-0 lg:pl-6 rounded-lg overflow-hidden no-underline">
             <!-- Content -->
             <div class="project-content flex justify-center flex-col gap-4 flex-1 order-2 lg:order-1 p-4 lg:p-0">
               <div class="flex flex-col">
-                <h3 class="text-heading-3">Course Planning App</h3>
-                <span class="text-subheader">Semester.ly</span>
+                <h3 class="text-heading-3 text-oxford-blue">Course Planning App</h3>
+                <span class="text-subheader text-oxford-blue">Semester.ly</span>
               </div>
-              <p class="text-body">A robust mobile application that let's Johns Hopkins students to plan their next semester on the go.</p>
-              <span class="inline-flex items-center gap-1 text-link hover:opacity-80 transition-opacity">
+              <p class="text-body text-oxford-blue">A robust mobile application that let's Johns Hopkins students to plan their next semester on the go.</p>
+              <span class="inline-flex items-center gap-1 text-link text-royal-blue hover:opacity-80 transition-opacity">
                 <span>View case study</span>
                 <svg width="15" height="24" viewBox="0 0 15 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5.5 8L10.5 12L5.5 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -157,21 +176,21 @@
             <!-- Image Background -->
             <div class="flex-1 order-1 lg:order-2 bg-wild-sand rounded-lg min-h-[280px] md:min-h-[337px] flex items-center justify-center overflow-hidden">
               <div class="w-full h-full bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
-                <span class="text-sm">Project Image</span>
+                <span class="text-slate-gray text-sm">Project Image</span>
               </div>
             </div>
           </a>
 
           <!-- Project Card: Course Planning App (Semester.ly) -->
-          <a href="/semesterly.html" class="project-card flex flex-col justify-center lg:flex-row lg:gap-12 pl-0 lg:pl-6 rounded-lg overflow-hidden no-underline">
+          <a href="semesterly.html" class="project-card flex flex-col justify-center lg:flex-row lg:gap-12 pl-0 lg:pl-6 rounded-lg overflow-hidden no-underline">
             <!-- Content -->
             <div class="project-content flex justify-center flex-col gap-4 flex-1 order-2 lg:order-1 p-4 lg:p-0">
               <div class="flex flex-col">
-                <h3 class="text-heading-3">Course Planning App</h3>
-                <span class="text-subheader">Semester.ly</span>
+                <h3 class="text-heading-3 text-oxford-blue">Course Planning App</h3>
+                <span class="text-subheader text-oxford-blue">Semester.ly</span>
               </div>
-              <p class="text-body">A robust mobile application that let's Johns Hopkins students to plan their next semester on the go.</p>
-              <span class="inline-flex items-center gap-1 text-link hover:opacity-80 transition-opacity">
+              <p class="text-body text-oxford-blue">A robust mobile application that let's Johns Hopkins students to plan their next semester on the go.</p>
+              <span class="inline-flex items-center gap-1 text-link text-royal-blue hover:opacity-80 transition-opacity">
                 <span>View case study</span>
                 <svg width="15" height="24" viewBox="0 0 15 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5.5 8L10.5 12L5.5 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -181,36 +200,10 @@
             <!-- Image Background -->
             <div class="flex-1 order-1 lg:order-2 bg-wild-sand rounded-lg min-h-[280px] md:min-h-[337px] flex items-center justify-center overflow-hidden">
               <div class="w-full h-full bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
-                <span class="text-sm">Project Image</span>
+                <span class="text-slate-gray text-sm">Project Image</span>
               </div>
             </div>
           </a>
-
-          <!-- Project Card: Course Planning App (Semester.ly) -->
-          <a href="/semesterly.html" class="project-card flex flex-col justify-center lg:flex-row lg:gap-12 pl-0 lg:pl-6 rounded-lg overflow-hidden no-underline">
-            <!-- Content -->
-            <div class="project-content flex justify-center flex-col gap-4 flex-1 order-2 lg:order-1 p-4 lg:p-0">
-              <div class="flex flex-col">
-                <h3 class="text-heading-3">Course Planning App</h3>
-                <span class="text-subheader">Semester.ly</span>
-              </div>
-              <p class="text-body">A robust mobile application that let's Johns Hopkins students to plan their next semester on the go.</p>
-              <span class="inline-flex items-center gap-1 text-link hover:opacity-80 transition-opacity">
-                <span>View case study</span>
-                <svg width="15" height="24" viewBox="0 0 15 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5.5 8L10.5 12L5.5 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </span>
-            </div>
-            <!-- Image Background -->
-            <div class="flex-1 order-1 lg:order-2 bg-wild-sand rounded-lg min-h-[280px] md:min-h-[337px] flex items-center justify-center overflow-hidden">
-              <div class="w-full h-full bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
-                <span class="text-sm">Project Image</span>
-              </div>
-            </div>
-          </a>
-
-
           
         </div>
         
@@ -221,10 +214,10 @@
     <!-- Footer -->
     <footer class="w-full border-t border-mystic py-16 px-6">
       <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-        <span class="text-subheader">© 2025 Montese Hall</span>
+        <span class="text-subheader text-slate-gray">© 2025 Montese Hall</span>
         <div class="flex gap-8">
-          <a href="mailto:montesehall@gmail.com" class="text-link hover: transition-colors">montesehall@gmail.com</a>
-          <a href="#" class="text-link hover: transition-colors">LinkedIn</a>
+          <a href="mailto:montesehall@gmail.com" class="text-link text-slate-gray hover:text-oxford-blue transition-colors">montesehall@gmail.com</a>
+          <a href="#" class="text-link text-slate-gray hover:text-oxford-blue transition-colors">LinkedIn</a>
         </div>
       </div>
     </footer>
