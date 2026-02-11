@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+
+.text-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+
+}
+
+.text-subtitle {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.text-heading-2-upper {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1.05;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.text-heading-3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.6;
+}
+
+.text-heading-4 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.text-subheader {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.text-body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.text-link {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  .text-title {
+    font-size: 36px;
+  }
+  .text-subtitle {
+    font-size: 18px;
+  }
+  .text-heading-2-upper {
+    font-size: 20px;
+  }
+  .text-heading-3 {
+    font-size: 22px;
+  }
+  .text-heading-4 {
+    font-size: 18px;
+  }
+}
+
+@layer components {
+  /* Custom typography components - rem based with 56% total increase (20% + 30%) */
+  .text-title {
+    @apply font-raleway font-bold text-[5.46rem] leading-[1.1] tracking-[-0.02em];
+  }
+
+  .text-subtitle {
+    @apply font-open-sans font-normal text-[1.95rem] leading-[1.5];
+  }
+
+  .text-heading-2-upper {
+    @apply font-raleway font-semibold text-[2.73rem] leading-[1.05] tracking-[0.08em] uppercase;
+  }
+
+  .text-heading-3 {
+    @apply font-raleway font-bold text-[2.73rem] leading-[1.6];
+  }
+
+  .text-heading-4 {
+    @apply font-raleway font-bold text-[1.95rem] leading-[1.6];
+  }
+
+  .text-subheader {
+    @apply font-open-sans font-semibold text-[1.4625rem] leading-[1.6];
+  }
+
+  .text-body {
+    @apply font-open-sans font-normal text-[1.56rem] leading-[1.5];
+  }
+
+  .text-link {
+    @apply font-open-sans font-semibold text-[1.4625rem] leading-[1.6];
+  }
+}
+
+@layer components {
+  /* Project card styles */
+  .project-card {
+    @apply transition-colors duration-300 cursor-pointer;
+  }
+
+  .project-card:hover {
+    background-color: rgba(45, 77, 113, 0.2);
+  }
+
+  .project-card .project-content {
+    @apply flex flex-col justify-center min-h-full;
+  }
+
+  /* Mobile styles */
+  @media (max-width: 1023px) {
+    .project-card {
+      @apply px-4;
+    }
+
+    .project-card .project-content {
+      @apply min-h-0;
+    }
+  }
+}
+
+@layer utilities {
+  /* Responsive typography */
+  @media (max-width: 768px) {
+    .text-title {
+      @apply text-[3.51rem];
+    }
+
+    .text-subtitle {
+      @apply text-[1.755rem];
+    }
+
+    .text-heading-2-upper {
+      @apply text-[1.95rem];
+    }
+
+    .text-heading-3 {
+      @apply text-[2.145rem];
+    }
+
+    .text-heading-4 {
+      @apply text-[1.755rem];
+    }
+  }
+}
